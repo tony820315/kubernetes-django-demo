@@ -20,19 +20,16 @@ $ minikube service flower-service
 ## Demo
 - Minikube dashboard
 
-![](https://i.imgur.com/ry1Kvc1.png)
+![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/Minikube_dashboard.png?raw=true)
 - Celery flower
 
-![](https://i.imgur.com/WeT7kRg.png)
+![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/Celery_flower.png?raw=true)
 - Shopping cart
 
-![](https://i.imgur.com/nGpho24.png)
+![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/Shopping_cart.png?raw=true)
 - Django admin
 
-![](https://i.imgur.com/5ME21VU.png)
-
-
-
+![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/Djang_admin.png?raw=true)
 
 ## Prerequisites
 The following are needed to run k8s-django-demo
