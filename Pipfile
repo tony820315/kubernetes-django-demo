@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+celery = "==4.1.0"
+psycopg2-binary = "*"
+pillow = "*"
+redis = "==2.10.6"
+flower = "*"
+django-redis = "==4.8.0"
+kombu = "==4.1.0"
+
+[requires]
+python_version = "3.6"
