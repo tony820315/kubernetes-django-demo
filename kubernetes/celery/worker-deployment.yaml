@@ -5,7 +5,7 @@ metadata:
   labels:
     deployment: celery-worker
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       pod: celery-worker

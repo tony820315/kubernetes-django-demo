@@ -16,6 +16,16 @@ $ minikube service django-service  # Wait if not ready
 $ minikube service flower-service
 
 ```
+## in GKE
+### Setting firewall
+$ gcloud compute firewall-rules create flower-node-port --allow tcp:5555
+$ gcloud compute firewall-rules create django-node-port --allow tcp:8000
+
+
+### Expose port as loadbalance
+$ kubectl expose deployment django --name django-service-out -n develop --type LoadBalancer --port 8000 --target-port 8000
+$ kubectl expose deployment flower --name django-flower-out -n develop --type LoadBalancer --port 5555 --target-port 5555
+
 
 ## Demo
 - Minikube dashboard

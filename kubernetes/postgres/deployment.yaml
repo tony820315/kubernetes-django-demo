@@ -1,12 +1,13 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: postgres
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: postgres-container
+  serviceName: postgres
   template:
     metadata:
       labels:
@@ -35,11 +36,17 @@ spec:
           ports:
             - containerPort: 5432
           volumeMounts:
-            - name: postgres-volume-mount
-              mountPath: /var/lib/postgresql/data
-
-      volumes:
-        - name: postgres-volume-mount
-          persistentVolumeClaim:
-            claimName: postgres-pvc
-
+            - name: postgres-persistent-storage
+              mountPath: /var/lib/postgresql
+              #      volumes:
+              #        - name: postgres-persistent-storage
+              #          persistentVolumeClaim:
+              #            claimName: postgres-pv-claim
+  volumeClaimTemplates:
+  - metadata:
+      name: postgres-persistent-storage
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 2Gi
