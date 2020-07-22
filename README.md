@@ -1,4 +1,5 @@
 # k8s-django-demo
+url: http://zach.nctu.me/
 k8s-django-demo is a demo that running django on Kubernetes Engine.
 
 ## How to get start
