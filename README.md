@@ -1,7 +1,7 @@
 # k8s-django-demo
 k8s-django-demo is a demo that running django on Kubernetes Engine.
 
-## How to get start 
+## How to get start
 ```
 $ kubectl apply -f postgres/  # See dashboard in browser
 $ kubectl apply -f redis/
@@ -30,7 +30,7 @@ $ kubectl expose deployment flower --name django-flower-out -n develop --type Lo
 ## Demo
 - Minikube dashboard
 
-![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/Minikube_dashboard.png?raw=true)
+![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/dashborad.png?raw=true)
 - Celery flower
 
 ![](https://github.com/tony820315/kubernetes-django-demo/blob/master/pic/Celery_flower.png?raw=true)
